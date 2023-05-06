@@ -351,6 +351,7 @@
 "Assets/Project/Scripts/GameController.cs"
 "Assets/Project/Scripts/Player.cs"
 "Assets/Project/Scripts/ScoreArea.cs"
+"Assets/Project/Scripts/Target.cs"
 -langversion:9.0
 
 /deterministic
