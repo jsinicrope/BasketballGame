@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    private float min = 2f;
-    private float max = 3f;
+    private float min = 0f;
+    private float max = 0f;
     public float dist = 5f;
     // Start is called before the first frame update
     void Start()
