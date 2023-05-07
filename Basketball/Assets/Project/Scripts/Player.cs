@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         ball.GetComponent<Rigidbody>().useGravity = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
