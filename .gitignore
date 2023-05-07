@@ -1,0 +1,6 @@
+
+*.dwlt
+*.log
+*.digestcache
+*.traceevents
+Basketball/Library/Bee/fullprofile.json
