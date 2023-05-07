@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreArea : MonoBehaviour
 {
@@ -17,6 +18,14 @@ public class ScoreArea : MonoBehaviour
         if (otherCollider.GetComponent<Ball> () != null)
         {
             effectObject.SetActive(true);
+            StartCoroutine(sceneLoader());
         }
+    }
+
+    IEnumerator sceneLoader()
+    {
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
