@@ -443,6 +443,14 @@ PrefabInstance:
       propertyPath: dist
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4075760989660277207, guid: a34626732e43fc44daefb6008b3cfc8e, type: 3}
+      propertyPath: canMoveY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075760989660277207, guid: a34626732e43fc44daefb6008b3cfc8e, type: 3}
+      propertyPath: canMoveZ
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4075760990788578392, guid: a34626732e43fc44daefb6008b3cfc8e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8

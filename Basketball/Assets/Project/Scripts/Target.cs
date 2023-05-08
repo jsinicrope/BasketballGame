@@ -13,59 +13,69 @@ public class Target : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        min = transform.position.z;
-        max = transform.position.z + dist;
+        //min = transform.position.z;
+        //max = transform.position.z + dist;
+        if (canMoveX == true)
+        {
+            min = transform.position.x;
+            max = transform.position.x + dist;
+        }
+
+        if (canMoveY == true)
+        {
+            min = transform.position.y;
+            max = transform.position.y + dist;
+        }
+
+        if (canMoveZ == true)
+        {
+            min = transform.position.z;
+            max = transform.position.z + dist;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.PingPong(Time.time * 2, max - min) + min);
-        /*
-        if (canMoveX)
+        //transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.PingPong(Time.time * 2, max - min) + min);
+        if (canMoveX == true)
         {
             xMovement();
         }
 
-        if (canMoveY)
+        if (canMoveY == true)
         {
             yMovement();
         }
 
-        if (canMoveZ)
+        if (canMoveZ == true)
         {
             zMovement();
         }
-        */
+
+
     }
 
     void xMovement()
     {
-        min = transform.position.x;
-        max = transform.position.x + dist;
-        while (canMoveX) 
-        { 
+
         transform.position = new Vector3(Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.y, transform.position.z); 
-        }
+        
     }
 
     void yMovement()
     {
-        min = transform.position.y;
-        max = transform.position.y + dist;
-        while (canMoveY)
-        {
-            transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.z);
-        }
+
+        transform.position = new Vector3(transform.position.x, Mathf.PingPong(Time.time * 2, max - min) + min, transform.position.z);
+        
     }
+
 
     void zMovement()
     {
-        min = transform.position.z;
-        max = transform.position.z + dist;
-        while (canMoveY)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.PingPong(Time.time * 2, max - min) + min);
-        }
+        
+        transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.PingPong(Time.time * 2, max - min) + min);
+        
     }
 }
